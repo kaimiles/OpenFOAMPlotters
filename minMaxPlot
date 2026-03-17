@@ -7,6 +7,6 @@ set ylabel "yPlus"
 set title "Plot of yPlus over simulationtime"
 set grid
 
-plot "/mnt/d/plotter/fieldMinMax.dat" skip 3 every 2 using 1:7 with lines title "yPlusMin"
+plot "/plotter/fieldMinMax.dat" skip 3 every 2 using 1:7 with lines title "yPlusMin"
 pause 1
 reread 
