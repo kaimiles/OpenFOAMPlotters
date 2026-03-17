@@ -1,0 +1,7 @@
+set title "CFL"
+set ylabel 'CFL'
+set xlabel 'Iteration'
+plot "< cat log.foamRun | grep 'Courant Number mean:' | cut -d' ' -f6 | sed -n 'p;N'| tr -d ','" title 'CFL Max' with lines, \
+     "< cat log.foamRun | grep 'Courant Number mean:' | cut -d' ' -f4 | sed -n 'p;N'| tr -d ','" title 'CFL Mean' with lines
+pause 1
+reread 

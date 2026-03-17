@@ -1,0 +1,14 @@
+set  yr [1e-2:100]
+set  xr [0:2.0]
+#set datafile separator "( )"
+set key bottom right
+set xlabel "Simulationtime [s]"
+set ylabel "yPlus"
+set title "Plot of yPlus over simulationtime"
+set grid
+
+plot "/mnt/d/plotter/solverInfo.dat" using 1:3 with lines title "yPlusMin",\
+     "/mnt/d/plotter/solverInfo.dat" using 1:4 with lines title "yPlusMax",\
+     "/mnt/d/plotter/solverInfo.dat" using 1:5 with lines title "yPlusAve"
+pause 1
+reread 

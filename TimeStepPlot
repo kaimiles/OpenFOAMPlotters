@@ -1,0 +1,6 @@
+set title "timeStep"
+set ylabel 'timeStep'
+set xlabel 'Iteration'
+plot "< cat log.foamRun | grep 'deltaT' | cut -d' ' -f3 | tr -d ','" title 'Time Step' with lines
+pause 1
+reread 

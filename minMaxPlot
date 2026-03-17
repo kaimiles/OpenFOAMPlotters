@@ -1,0 +1,12 @@
+set  yr [0:10000]
+set  xr [0:0.003]
+#set datafile separator "( )"
+set key bottom right
+set xlabel "Simulationtime [s]"
+set ylabel "yPlus"
+set title "Plot of yPlus over simulationtime"
+set grid
+
+plot "/mnt/d/plotter/fieldMinMax.dat" skip 3 every 2 using 1:7 with lines title "yPlusMin"
+pause 1
+reread 

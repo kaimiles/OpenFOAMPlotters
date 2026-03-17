@@ -1,0 +1,13 @@
+set  yr [-1e4:1e3]
+set  xr [0:2.0]
+set datafile separator "(,)"
+set key bottom right
+set xlabel "Simulationtime [s]"
+set ylabel "Drag Force [N]"
+set title "Plot of rigidBodyForces over simulationtime"
+set grid
+
+plot "./postProcessing/rigidBodyForces/0/rigidBodyForces.dat" using 1:5 with lines title "PresForce_x",\
+     "./postProcessing/rigidBodyForces/0/rigidBodyForces.dat" using 1:7 with lines title "ViscForce_x"
+pause 1
+reread 
