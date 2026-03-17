@@ -7,8 +7,8 @@ set ylabel "yPlus"
 set title "Plot of yPlus over simulationtime"
 set grid
 
-plot "/mnt/d/plotter/yPlus.dat" every 2 using 1:3 with lines title "yPlusMin",\
-     "/mnt/d/plotter/yPlus.dat" every 2 using 1:4 with lines title "yPlusMax",\
-     "/mnt/d/plotter/yPlus.dat" every 2 using 1:5 with lines title "yPlusAve"
+plot "/plotter/yPlus.dat" every 2 using 1:3 with lines title "yPlusMin",\
+     "/plotter/yPlus.dat" every 2 using 1:4 with lines title "yPlusMax",\
+     "/plotter/yPlus.dat" every 2 using 1:5 with lines title "yPlusAve"
 pause 1
 reread 
